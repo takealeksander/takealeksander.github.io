@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fontawesome/css/all.css">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="" class="Logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <i class="fa-solid fa-circle-xmark"></i>
+                </ul>
+                <i class="fa-solid fa-bars"></i>
+            </nav>
+            <div class="header-text">
+                <p>Web Developer</p>
+                <h1>I'm </h1>
+                <h1>Aleksander Take Labina</h1>
+            </div>
+        </div>
+    </div>
+    <!-- About -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/aku.jpg" >
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title"> About Me</h1>
+                    <p> Hola !
+                        I'm Aleksander Take Labina, I'm often called Sandro because that's my nickname. 
+                        I graduated from Gunadarma University, majoring in Informatics Engineering.
+                        I like learning new things, like challenges, working in a team and can work in urgent situations</p>
+                
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills </p>
+                            <p class="tab-links" onclick="opentab('projects')">Projects </p>
+                            <p class="tab-links" onclick="opentab('education')">Education </p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>Web Development</span><br>Web app Development</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="projects">
+                            <ul>
+                                <li><span>2022-2023</span><br>Create a Web-based NAGI PUSKESMAS Online Queue application using the Laravel & Bootstrap framework</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>2014-2017</span><br>SMAN 1 Larantuka</li>
+                                <li><span>2017-2023</span><br>Gunadarma University</li>
+                            </ul>
+                        </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+<!-- Portfolio -->
+<div id="portfolio">
+<div class="container">
+    <h1 class="sub-title">My Work</h1>
+    <p>Create a Web-based NAGI PUSKESMAS Online Queue application using the Laravel & Bootstrap framework (2023)</p>
+    <div class="work-list">
+        <div class="work">
+            <img src="images/login.PNG" >
+            <div class="layer">
+                <h3>Halaman login</h3>
+                
+            </div>
+        </div>
+        <div class="work">
+            <img src="images/dashboard.PNG" >
+            <div class="layer">
+                <h3>Halaman Dashboard</h3>
+            </div>
+        </div>
+        <div class="work">
+            <img src="images/antrian.PNG" >
+            <div class="layer">
+                <h3>Halaman Antrian</h3>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<!-- Contact -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1  class="sub-title">Contact Me</h1>
+                <p><i class="fa-regular fa-envelope"></i>aleksandertake05@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i>081236474570</p>
+                <div class="sosial-icons">
+                    <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="contact-right">
+                <form> 
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright © Sandro. Made with  <i class="fa-solid fa-heart"></i>  by Sandro Labina</p>
+    </div>
+</div>
+
+
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){  
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){  
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+</body>
+</html>
